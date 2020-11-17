@@ -8,9 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent {
   title = 'ng-shoppingcart';
   items = [
-    {name:"milo", desc:"A nice hot drink", img:"../assets/images/milo.png", qty:1},
-    {name:"coffee", desc:"Also a nice hot drink", img:"../assets/images/coffee.png", qty:1},
-    {name:"tea", desc:"A good hot drink", img:"../assets/images/tea.png", qty:1}
+    {name:"milo", desc:"A nice hot drink", img:"assets/images/milo.png", qty:1},
+    {name:"coffee", desc:"Also a nice hot drink", img:"assets/images/coffee.png", qty:1},
+    {name:"tea", desc:"A good hot drink", img:"assets/images/tea.png", qty:1}
 
   ];
   cart = [];
