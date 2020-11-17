@@ -1,0 +1,20 @@
+<div class="container ">
+    <p>my-cart works!</p>
+    <h1>This is my cart!</h1>
+    <table>
+        <tr *ngFor="let item of cart; let i = index" class="row justify">
+            <td class="col-6">
+                <img src="{{item.img}}" alt="">
+                <p>{{item.name}}</p>
+            </td>
+            <div class="col-3 mt-5">
+                <p>{{item.qty}}</p>
+            </div>
+            <div class="col-3 mt-5">
+                <td>
+                    <button value=i (click)="OnClick(i)">Remove</button>
+                </td>
+            </div>
+        </tr>
+    </table>
+</div>
