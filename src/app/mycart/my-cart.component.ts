@@ -14,7 +14,6 @@ export class MyCartComponent implements OnInit {
   }
 
   OnClick(i) {
-    console.log(i);
     this.removeItem.next(i);
   }
 

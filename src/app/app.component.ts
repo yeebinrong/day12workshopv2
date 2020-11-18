@@ -18,16 +18,18 @@ export class AppComponent {
   ngOnInit(): void {
   }
 
-  appAddItem (i) {
-    if (this.cart.includes(this.items[i])) {
-      this.cart[this.cart.indexOf(this.items[i])].qty += 1;
-    } else {
-      this.cart.push(this.items[i]);
+  appAddItem (i) {     
+    for (let item of this.cart) {
+      if (item.name == this.items[i].name) {
+        item.qty = item.qty + 1;
+        return;
+      }
     }
-  }
+    const copied = Object.assign({}, this.items[i]);
+    this.cart.push(copied);
+  } 
 
   appRemoveItem (i) {
-    this.cart[i].qty = 1;
     this.cart.splice(i, 1);
   }
 }

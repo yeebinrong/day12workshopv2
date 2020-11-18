@@ -14,7 +14,6 @@ export class ShoppingCartComponent implements OnInit {
   }
 
   OnClick(i) {
-    console.log(i);
     this.addItem.next(i);
   }
 }
